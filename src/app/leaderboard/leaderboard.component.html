@@ -1,0 +1,9 @@
+<md-list>
+    <h1 md-subheader>{{title}}</h1>
+    <md-list-item *ngFor="let player of ranking | async">
+    <md-icon md-list-avatar>face</md-icon>
+    <h4 md-line>{{player.player}}</h4>
+    <p md-line> Wins: {{player.win}} </p>
+  </md-list-item>
+  <md-divider></md-divider>
+</md-list>

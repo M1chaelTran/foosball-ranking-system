@@ -1,0 +1,11 @@
+<md-toolbar color="primary">
+    {{title}}
+    <span class="app-toolbar-filler"></span>
+</md-toolbar>
+<div class="app-content">
+    <router-outlet></router-outlet>
+</div>
+
+<span class="app-action" routerLink="/match" [routerLinkActive]="['hidden']">
+  <button md-fab><md-icon>add circle</md-icon></button>
+</span>
