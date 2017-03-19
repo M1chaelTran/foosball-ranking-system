@@ -1,14 +1,15 @@
 <md-list>
-    <md-list-item *ngFor="let game of games;">
-        <md-list-item *ngFor="let player of game.Players;">
-            <md-icon md-list-avatar>face</md-icon>
-            <span md-line>Player: {{player.Name}}</span>
-            <span md-line>Team: {{player.Team}}</span>
-            <md-icon *ngIf="player.Team === game.TeamWon" style="color: gold;">star rate
-            </md-icon>
-        </md-list-item>
-        <md-list-item>
-            <span>{{game.Time | amTimeAgo}}</span>
-        </md-list-item>
-    </md-list-item>
+    <md-card *ngFor="let game of games;" style="margin-bottom: 20px">
+        <md-card-subtitle>Competed {{game.Time | amTimeAgo}}</md-card-subtitle>
+        <md-card-content>
+            <div *ngFor="let player of game.Players;" style="padding-right: 20px; display: inline">
+                <md-card-title>
+                    <md-icon *ngIf="player.Team === game.TeamWon" style="color: gold;">star rate
+                    </md-icon>
+                    <a routerLink="/statistics/player/{{player.Name}}">{{player.Name}}</a>
+                </md-card-title>
+                <md-card-subtitle>Team: {{player.Team}}</md-card-subtitle>
+            </div>
+        </md-card-content>
+    </md-card>
 </md-list>

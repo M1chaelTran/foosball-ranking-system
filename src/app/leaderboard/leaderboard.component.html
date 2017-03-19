@@ -1,9 +1,15 @@
 <h3>{{title}}</h3>
 <md-list>
-    <md-list-item *ngFor="let player of ranking; let i = index;">
-        <md-icon md-list-avatar>face</md-icon>
-        <h4 md-line>{{player.Name}}</h4>
-        <p md-line> Ranking: {{i+1}} </p>
-        <p md-line> Score: {{player.Ranking}} </p>
-    </md-list-item>
+    <md-card *ngFor="let player of ranking; let i = index;" style="margin-bottom: 20px">
+        <!--<md-card-avatar>-->
+            <!--<md-icon md-list-avatar>face</md-icon>-->
+        <!--</md-card-avatar>-->
+        <md-card-title>
+            <a routerLink="/statistics/player/{{player.Name}}">{{player.Name}}</a>
+        </md-card-title>
+        <md-card-content>
+            <span md-line>Ranking: {{i+1}}</span>
+            <!--<span md-line>Score: {{player.Ranking}}</span>-->
+        </md-card-content>
+    </md-card>
 </md-list>

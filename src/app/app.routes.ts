@@ -1,11 +1,13 @@
 import {LeaderBoardComponent} from './leaderboard/leaderboard.component';
 import {GameComponent} from './game/game.component';
 import {MatchComponent} from './match/match.component';
+import {StatisticComponent} from './statistic/statistic.component'
 
 export const Components = [
     LeaderBoardComponent,
     GameComponent,
-    MatchComponent
+    MatchComponent,
+    StatisticComponent
 ];
 
 export const Routes = [
@@ -24,5 +26,11 @@ export const Routes = [
     {
         path: 'match',
         component: MatchComponent
-    }
+    }, {
+        path: 'statistics',
+        component: StatisticComponent
+    }, {
+        path: 'statistics/player/:playerName',
+        component: StatisticComponent
+    },
 ];

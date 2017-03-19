@@ -10,6 +10,6 @@ export class AppComponent {
   navLinks = [
       {path: '/leaderboard', label: 'Leaderboard'},
       {path: '/games', label: 'Games'},
-      {path: '/statistic', label: 'Statistics'},
+      {path: '/statistics', label: 'Statistics'},
   ];
 }
