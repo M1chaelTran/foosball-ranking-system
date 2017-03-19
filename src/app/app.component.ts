@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Foosball Ranking System';
+  navLinks = [
+      {path: '/leaderboard', label: 'Leaderboard'},
+      {path: '/games', label: 'Games'},
+      {path: '/statistic', label: 'Statistics'},
+  ];
 }

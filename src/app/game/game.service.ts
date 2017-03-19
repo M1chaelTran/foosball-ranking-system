@@ -2,18 +2,18 @@ import {Injectable} from '@angular/core';
 import {AngularFire} from 'angularfire2';
 
 @Injectable()
-export class LeaderBoardService {
+export class GameService {
     database: any;
 
     constructor(af: AngularFire) {
         this.database = af.database;
     }
 
-    getRanking() {
-        return this.database.list('/players', {
+    getGames() {
+        return this.database.list('/matches', {
             query: {
-                limitToLast: 10,
-                orderByChild: 'Ranking',
+                limitToLast: 20,
+                orderByChild: 'Time',
             }
         });
     }

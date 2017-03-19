@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from 'angularfire2';
+import {MomentModule} from 'angular2-moment';
 
 import 'hammerjs';
 
@@ -24,8 +25,9 @@ import { Routes, Components } from './app.routes';
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
+    MomentModule,
     RouterModule.forRoot(Routes),
-    AngularFireModule.initializeApp(FirebaseConfig)
+    AngularFireModule.initializeApp(FirebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

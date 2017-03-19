@@ -1,0 +1,14 @@
+<md-list>
+    <md-list-item *ngFor="let game of games;">
+        <md-list-item *ngFor="let player of game.Players;">
+            <md-icon md-list-avatar>face</md-icon>
+            <span md-line>Player: {{player.Name}}</span>
+            <span md-line>Team: {{player.Team}}</span>
+            <md-icon *ngIf="player.Team === game.TeamWon" style="color: gold;">star rate
+            </md-icon>
+        </md-list-item>
+        <md-list-item>
+            <span>{{game.Time | amTimeAgo}}</span>
+        </md-list-item>
+    </md-list-item>
+</md-list>

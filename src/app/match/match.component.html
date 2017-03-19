@@ -5,17 +5,17 @@
     <md-list>
       <md-list-item *ngFor="let player of team1">
         <md-input-container md-line>
-          <input mdInput [(ngModel)]="player.name" placeholder="Player name">
+          <input mdInput [(ngModel)]="player.Name" placeholder="Player name">
         </md-input-container>
-        <button md-icon-button (click)="deletePlayer(player.name, '1')">
+        <button md-icon-button (click)="deletePlayer(player.Name, 1)">
           <md-icon>delete</md-icon>
         </button>
       </md-list-item>
       <md-list-item>
         <md-input-container md-line>
-          <input #player1 mdInput placeholder="Player name" (keyup.enter)="addPlayer(player1, '1')">
+          <input #player1 mdInput placeholder="Player name" (keyup.enter)="addPlayer(player1, 1)" (blur)="addPlayer(player1, 1)">
         </md-input-container>
-        <button md-icon-button (click)="addPlayer(player1, '1')">
+        <button md-icon-button (click)="addPlayer(player1, 1)">
           <md-icon>add</md-icon>
         </button>
       </md-list-item>
@@ -31,17 +31,17 @@
     <md-list>
       <md-list-item *ngFor="let player of team2">
         <md-input-container md-line>
-          <input mdInput [(ngModel)]="player.name" placeholder="Player name">
+          <input mdInput [(ngModel)]="player.Name" placeholder="Player name">
         </md-input-container>
-        <button md-icon-button (click)="deletePlayer(player.name, '2')">
+        <button md-icon-button (click)="deletePlayer(player.Name, 2)">
           <md-icon>delete</md-icon>
         </button>
       </md-list-item>
       <md-list-item>
         <md-input-container md-line>
-          <input #player2 mdInput placeholder="Player name" (keyup.enter)="addPlayer(player2, '2')">
+          <input #player2 mdInput placeholder="Player name" (keyup.enter)="addPlayer(player2, 2)" (blur)="addPlayer(player2, 2)">
         </md-input-container>
-        <button md-icon-button (click)="addPlayer(player2, '2')">
+        <button md-icon-button (click)="addPlayer(player2, 2)">
           <md-icon>add</md-icon>
         </button>
       </md-list-item>
@@ -49,13 +49,13 @@
   </div>
 </div>
 <div fxLayout="row" fxLayoutGap="10px" style="text-align: center">
-  <button md-raised-button fxFlex="40" fxFlexFill (click)="saveMatch('1')" >
+  <button md-raised-button fxFlex="40" fxFlexFill (click)="saveMatch(1)" >
       <h2>Team 1 Wins</h2>
     </button>
-  <button md-raised-button fxFlex fxFlexFill (click)="saveMatch('0')">
+  <button md-raised-button fxFlex fxFlexFill (click)="saveMatch(0)">
       <h2>Draw</h2>
     </button>
-  <button md-raised-button fxFlex="40" fxFlexFill (click)="saveMatch('2')">
+  <button md-raised-button fxFlex="40" fxFlexFill (click)="saveMatch(2)">
       <h2>Team 2 Wins</h2>
     </button>
 </div>
