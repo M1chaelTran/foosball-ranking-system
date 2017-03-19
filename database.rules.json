@@ -4,6 +4,9 @@
     ".write": "true",
     "players": {
       ".indexOn": ["Name", "Ranking"]
+    },
+    "matches": {
+      ".indexOn": ["Time"]
     }
   }
 }
